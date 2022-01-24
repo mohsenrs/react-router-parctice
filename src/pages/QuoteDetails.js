@@ -1,7 +1,7 @@
 import React from 'react'
 
 function QuoteDetails() {
-  return <div>quote details</div>
+  return <h1>quote details</h1>
 }
 
 export default QuoteDetails
