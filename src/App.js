@@ -4,6 +4,7 @@ import AllQuotes from './pages/AllQuotes'
 import NewQuote from './pages/NewQuote'
 import NotFound from './pages/NotFound'
 import QuoteDetails from './pages/QuoteDetails'
+import Comments from './components/comments/Comments';
 
 function App() {
   return (
@@ -15,8 +16,11 @@ function App() {
         <Route path='/quotes' exact>
           <AllQuotes />
         </Route>
-        <Route path='/quotes/:quoteId'>
+        <Route path='/quotes/:quoteId' exact>
           <QuoteDetails />
+        </Route>
+        <Route path='/quotes/:quoteId/comments'>
+          <Comments />
         </Route>
         <Route path='/new-quotes'>
           <NewQuote />
