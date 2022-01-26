@@ -17,10 +17,16 @@ function QuoteDetails() {
   return (
     <>
       <HighlightedQuote text={quote.text} author={quote.author} />
-      <Link to={`/quotes/${params.quoteId}/comments`}>Comments</Link>
-      {/* <Route path={`/quotes/${params.quoteId}/comments`}>
+      <Route path={`/quotes/${params.quoteId}`} exact>
+        <div className='centered'>
+          <Link className='btn--flat' to={`/quotes/${params.quoteId}/comments`}>
+            Comments
+          </Link>
+        </div>
+      </Route>
+      <Route path={`/quotes/${params.quoteId}/comments`}>
         <Comments />
-      </Route> */}
+      </Route>
     </>
   )
 }
